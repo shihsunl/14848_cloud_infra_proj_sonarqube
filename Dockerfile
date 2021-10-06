@@ -1,0 +1,11 @@
+FROM sonarqube:latest
+ENV DEBIAN_FRONTEND noninteractive
+MAINTAINER Shih-Sung-Lin
+ENV PORT 9000
+ENV SONAR_WEB_CONTEXT /sonarqube
+ENV SONAR_ES_BOOTSTRAP_CHECKS_DISABLE true
+EXPOSE 9000
+
+WORKDIR /opt/sonarqube
+
+CMD ./bin/run.sh 
